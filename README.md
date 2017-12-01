@@ -5,14 +5,15 @@ Convert from fuzzy dates like "yesterday", "2 weeks and 1 day ago", "next wed", 
 
 This is useful for processing command line arguments:
 
->>> from optparse import OptionParser
-	>>> import magicdate
->>> parser = OptionParser(option_class=magicdate.MagicDateOption)
-	>>> parser.add_option(
-			...     '-s', '--start', dest='start', type='magicdate', default=None)
-	>>> parser.add_option(
-			...     '-e', '--end', dest='end', type='magicdate', default='today')
+    from optparse import OptionParser
+    import magicdate
 
-	Now you can pass options like "today", "1996-01-01", etc., to your program.
+    parser = OptionParser(option_class=magicdate.MagicDateOption)
+    parser.add_option(
+        '-s', '--start', dest='start', type='magicdate', default=None)
+    parser.add_option(
+        '-e', '--end', dest='end', type='magicdate', default='today')
 
-	Inspired by Simon Willison's `dateparse.js`.
+Now you can pass options like "today", "1996-01-01", etc., to your program.
+
+Inspired by Simon Willison's `dateparse.js`.
