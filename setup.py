@@ -1,7 +1,7 @@
 from setuptools import setup
 RELEASE = True
 
-classifiers = """\
+classifiers = """
 Development Status :: 4 - Beta
 Environment :: Console
 Intended Audience :: Developers
@@ -11,7 +11,7 @@ Programming Language :: Python
 Topic :: Software Development :: Libraries :: Python Modules
 """
 
-version = '0.2'
+version = '0.2.1'
 
 setup(
     name='magicdate',
@@ -36,15 +36,11 @@ Now you can pass options like "today", "1996-01-01", etc., to your program.
 Inspired by Simon Willison's ``dateparse.js``.
 
 """,
-    classifiers=filter(None, classifiers.split("\n")),
+    classifiers=[c for c in classifiers.split("\n") if c],
     keywords='datetime time',
     author='Beto Dealmeida',
     author_email='roberto@dealmeida.net',
     url='https://github.com/betodealmeida/magicdate',
-    download_url=(
-        "http://cheeseshop.python.org/packages/source/m/magicdate/"
-        "magicdate-%s.tar.gz" % version
-    ),
     license='MIT',
     py_modules=['magicdate'],
     include_package_data=True,
