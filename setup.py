@@ -11,7 +11,7 @@ Programming Language :: Python
 Topic :: Software Development :: Libraries :: Python Modules
 """
 
-version = '0.2.1'
+version = '0.2.2'
 
 setup(
     name='magicdate',
