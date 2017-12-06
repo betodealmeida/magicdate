@@ -305,7 +305,7 @@ def main():
     parser = OptionParser()
     parser.add_option('-f', '--format', dest='fmt', default='%Y/%m/%d')
     options, args = parser.parse_args()
-    output = ' '.join(magicdate(arg).strftime(options.fmt) for arg in args)
+    output = magicdate(' '.join(args)).strftime(options.fmt)
     sys.stdout.write(output)
     sys.stdout.write('\n')
 
